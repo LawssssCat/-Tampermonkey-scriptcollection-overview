@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Image Downloader
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.1.1
 // @description  下载图片
 // @author       lawsssscat
 // @match        https://telegra.ph/*
@@ -59,7 +59,7 @@
         // from jszip.min.js
         var zipFolder = new JSZip();
         if(!zip_name) {
-            zip_name="imgs.zip";
+            zip_name = 'img_all-' + (document.domain||document.location.hostname) + '-' + document.title + '.zip';
         }
         if(!img_url_array || !img_url_array.length) {
             console.log("fail: empty img url array!");
@@ -95,8 +95,8 @@
             });
         });
     }
-    unsafeWindow.download_img_all_zip=function download_img_all_zip() {
-        download_img_zip(find_img_all(),'img_all.zip');
+    unsafeWindow.download_img_all_zip=function download_img_all_zip(zip_name) {
+        download_img_zip(find_img_all(), zip_name);
     }
     unsafeWindow.help_img_functions = function help_img_functions() {
         console.table({
