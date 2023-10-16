@@ -21,6 +21,8 @@
         + ~~https://github.com/LawssssCat/Tampermonkey-scriptcollection-taoyuancun123/blob/master/ImageDownloader.user.js~~
             + [ ] 能用，不完善，换❓，改❓
 + https://github.com/LawssssCat/Tampermonkey-scriptcollection-xiu2
++ https://github.com/LawssssCat/PTMyBonusCalc
+    + pt 魔力计算
 + [local](user.js/)
     + CSDN 限制解除
         + [user.js/csdn_restrictless.user.js](user.js/csdn_restrictless.user.js)
